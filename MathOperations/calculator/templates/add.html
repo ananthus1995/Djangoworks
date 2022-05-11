@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+{%block body_block%}
+<div class="">
+    <h3>addition of two numbers</h3>
+    <form action="" method="post">
+        {%csrf_token%}
+        <input type="text" name="num1" placeholder="number1" required value={{number1}} >
+        <span>+</span>
+         <input type="text" name="num2" placeholder="number2"  required value={{number2}} >
+        {%if sumofnum%}
+         <span>=</span>
+        <input type="text" name="" id="" readonly value={{sumofnum}}>
+
+        {%endif%}
+
+        <button type="submit">Click to Add</button><br>
+
+
+    </form>
+
+</div>
+{%endblock%}
+

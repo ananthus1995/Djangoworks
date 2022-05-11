@@ -1,0 +1,13 @@
+{%extends 'base.html'%}
+{%block body_block%}
+<h3>square of a number</h3>
+<form action="" method="post">
+{%csrf_token%}
+  <input type="text" name="num" placeholder="enter a number" required value={{numbers}} >
+  <button type="submit">find</button><br>
+    {%if result%}
+        <p>square of {{numbers}} is {{result}}</p>
+    {%endif%}
+
+</form>
+{%endblock%}

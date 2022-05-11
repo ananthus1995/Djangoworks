@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+{%block body_block%}
+<form action="" method="post">
+{%csrf_token%}
+  <input type="text" name="num1" placeholder="enter first number" required value={{n1}} >
+    <input type="text" name="num2" placeholder="enter second number" required value={{n2}} >
+  <button type="submit">find</button><br>
+
+</form>
+{%if prime_result%}
+        <div>Prime Numbers</div>
+        {%for pnum in prime_result%}
+            <div>{{pnum}}</div>
+        {%endfor%}
+    {%endif%}
+
+    {%if nonprime_result%}
+        <div>Non-Prime Numbers</div>
+        {%for nonpnum in nonprime_result%}
+            <div>{{nonpnum}}</div>
+        {%endfor%}
+    {%endif%}
+{%endblock%}

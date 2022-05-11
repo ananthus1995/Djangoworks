@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+{%block body_block%}
+<div class="">
+    <h3>Subtraction</h3>
+<form action="" method="post">
+    {%csrf_token%}
+    <input type="text" name="n1" placeholder="number1" required value={{number1}} >
+        <span>-</span>
+         <input type="text" name="n2" placeholder="number2" required value={{number2}} >
+        {%if result%}
+         <span>=</span>
+        <input type="text" name="" id="" readonly value={{result}}>
+
+        {%endif%}
+
+        <button type="submit">Click to Sutract</button><br>
+    </form>
+
+</div>
+{%endblock%}
+
